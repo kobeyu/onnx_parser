@@ -9,7 +9,8 @@ message(STATUS "Build Configuration: ${CMAKE_BUILD_TYPE}")
 message(STATUS "Build executables in: ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
 
 add_definitions(-std=c++11)
-
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
+set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g2 -ggdb")
 # Source directories
 set(INC_ONNX_DIR /home/kobeyu/workspace/onnx_project/onnx/install/include)
 set(LIB_ONNX_DIR /home/kobeyu/workspace/onnx_project/onnx/install/lib)
